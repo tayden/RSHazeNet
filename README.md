@@ -12,9 +12,9 @@
   target = target * 0.5 + 0.5
   ```
 
-  | ![with_transform](https://github.com/chdwyb/FasterRSD-Net/images/with_transform.png) | ![without_transform](https://github.com/chdwyb/FasterRSD-Net/images/without_transform.png) |
-  | :----------------------------------------------------------: | :----------------------------------------------------------: |
-  |         **With the transform of [-1, 1] to [0, 1]**          |        **Without the transform of [-1, 1] to [0, 1]**        |
+  | ![with_transform](./images/with_transform.png) | ![without_transform](./images/without_transform.png) |
+  | :--------------------------------------------: | :--------------------------------------------------: |
+  |  **With the transform of [-1, 1] to [0, 1]**   |    **Without the transform of [-1, 1] to [0, 1]**    |
 
 
 ### Requirements

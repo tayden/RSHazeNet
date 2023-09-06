@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 from torch.autograd import Variable
 import torch.backends.cudnn as cudnn
 from utils import torchPSNR
-from FasterRSDNet import FasterRSDNet
+from model import RSHazeNet
 from torch.cuda.amp import autocast, GradScaler
 from datasets import *
 from options import Options
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     best_psnr = 0
     best_epoch = 0
 
-    myNet = FasterRSDNet()
+    myNet = RSHazeNet()
     if opt.CUDA_USE:
         myNet = myNet.cuda()
 

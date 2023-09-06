@@ -1,6 +1,6 @@
-###  An Encoder-free and Decoder-free Framework for Efficient Remote Sensing Image Dehazing
+###  Encoder-minimal and Decoder-minimal Framework for Remote Sensing Image Dehazing
 
-**Abstract**: Haze obscures remote sensing images, hindering valuable information extraction. Although Existing approaches greatly advance this endeavor, they often rely on conventional heavy encoder-decoder architectures, which consequently results in extended inference durations. To this end, we propose FasterRSD-Net, an encoder-free and decoder-free framework for efficient remote sensing image dehazing. The primary objective of our study is to shift the emphasis away from encoders and decoders and instead concentrate on skip connections to develop a more hierarchical-meeting architecture. Furthermore, regarding the process of merging features within the same level, we develop an innovative module called the intra-level transposed fusion module (ITFM). This module employs adaptive transposed self-attention to capture comprehensive context-aware information, facilitating the robust feature fusion. Meanwhile, we present a cross-level multi-view interaction module (CMIM) to enable effective interactions between features from various levels, which aims to mitigate the loss of information that often occurs due to repeated sampling operations. In addition, we propose a multi-view progressive extraction block (MPEB) that partitions the features into four distinct components and employs convolution with varying kernel sizes, groups, and dilation factors to facilitate view-progressive feature learning. This approach improves the feature extraction while reducing computational complexity. Extensive experiments demonstrate the superiority of our proposed FasterRSD-Net over the current state-of-the-art methods on eight public datasets and our collected real-world dataset. We release the source code and all pre-trained models at https://github.com/chdwyb/FasterRSD-Net.
+**Abstract**: Haze obscures remote sensing images, hindering valuable information extraction. To this end, we propose RSHazeNet, an encoder-minimal and decoder-minimal framework for efficient remote sensing image dehazing. Specifically, regarding the process of merging features within the same level, we develop an innovative module called intra-level transposed fusion module (ITFM). This module employs adaptive transposed self-attention to capture comprehensive context-aware information, facilitating the robust context-aware feature fusion. Meanwhile, we present a cross-level multi-view interaction module (CMIM) to enable effective interactions between features from various levels, mitigating the loss of information due to the repeated sampling operations. In addition, we propose a multi-view progressive extraction block (MPEB) that partitions the features into four distinct components and employs convolution with varying kernel sizes, groups, and dilation factors to facilitate view-progressive feature learning. Extensive experiments demonstrate the superiority of our proposed RSHazeNet. We release the source code and all pre-trained models at https://github.com/chdwyb/RSHazeNet.
 
 ### News 🚀🚀🚀
 
@@ -32,7 +32,7 @@ opencv-python 4.5.2.54
 
 ### Train
 
-If you intend to conduct training on our proposed FasterRSD-Net using your own datasets, it is imperative to initially ascertain the training and testing paths specified in `options.py`. Specifically, the paths should be provided in the manner illustrated below.
+If you intend to conduct training on our proposed RSHazeNet using your own datasets, it is imperative to initially ascertain the training and testing paths specified in `options.py`. Specifically, the paths should be provided in the manner illustrated below.
 
 ```python
 # training
@@ -63,7 +63,7 @@ To facilitate expeditious testing on the datasets utilized in our study, we addi
 
 ### Test
 
-To assess the effectiveness of our proposed FasterRSD-Net on your personalized datasets, it is imperative to initially identify the testing paths delineated in the `options.py` file. For instance, the paths should be specified in the following format.
+To assess the effectiveness of our proposed RSHazeNet on your personalized datasets, it is imperative to initially identify the testing paths delineated in the `options.py` file. For instance, the paths should be specified in the following format.
 
 ```python
 # testing
@@ -79,7 +79,7 @@ Subsequently, it may be necessary to modify the path of the pre-trained model as
 self.MODEL_PRE_PATH = './rs_haze.pth'
 ```
 
-Now you can proceed with the testing phase and assess the performance of our proposed FasterRSD-Net.
+Now you can proceed with the testing phase and assess the performance of our proposed RSHazeNet.
 
 ```pyth
 python test.py

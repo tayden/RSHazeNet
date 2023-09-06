@@ -204,9 +204,9 @@ class BasicBlock(nn.Module):
         return x
 
 
-class FasterRSDNet(nn.Module):
+class RSHazeNet(nn.Module):
     def __init__(self, in_chans=3, out_chans=4, dim=32, depths=(2, 3, 4)):
-        super(FasterRSDNet, self).__init__()
+        super(RSHazeNet, self).__init__()
 
         self.patch_embed_level_1 = OverlapPatchEmbed(in_c=in_chans, embed_dim=dim, bias=False)
         self.skip_connection_level_1_pre = nn.Sequential(*[BasicBlock(dim) for _ in range(depths[0] // 2)])
@@ -279,7 +279,7 @@ class FasterRSDNet(nn.Module):
 
 if __name__ == '__main__':
     x = torch.randn((1, 3, 512, 512)).cuda()
-    net = FasterRSDNet().cuda()
+    net = RSHazeNet().cuda()
 
     from thop import profile, clever_format
 

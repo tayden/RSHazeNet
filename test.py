@@ -6,7 +6,7 @@ from tqdm import tqdm
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
 from pytorch_msssim import ssim
-from FasterRSDNet import FasterRSDNet
+from model import RSHazeNet
 from skimage import img_as_ubyte
 from datasets import *
 from options import Options
@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     opt = Options()
 
-    myNet = FasterRSDNet()
+    myNet = RSHazeNet()
     if opt.CUDA_USE:
         myNet = myNet.cuda()
 

@@ -4,17 +4,7 @@
 
 ### News 🚀🚀🚀
 
-- **July 21, 2023**: We have identified the underlying reasons behind DehazeFormer's production of low-quality images with high metric scores. The subsequent code present in `test.py` file leads to suboptimal visual outcomes. Moreover, we provide two illustrative examples to substantiate this finding.
-
-  ```python
-  # [-1, 1] to [0, 1]
-  output = output * 0.5 + 0.5
-  target = target * 0.5 + 0.5
-  ```
-
-  | ![with_transform](./images/with_transform.png) | ![without_transform](./images/without_transform.png) |
-  | :--------------------------------------------: | :--------------------------------------------------: |
-  |  **With the transform of [-1, 1] to [0, 1]**   |    **Without the transform of [-1, 1] to [0, 1]**    |
+- **Oct 17, 2023**: Our new work ([Encoder-free Multi-axis Physics-aware Fusion Network for Remote Sensing Image Dehazing](https://ieeexplore.ieee.org/abstract/document/10287960)) is accepted by IEEE Transactions on Geoscience and Remote Sensing.
 
 
 ### Requirements
